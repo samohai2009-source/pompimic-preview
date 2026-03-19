@@ -170,6 +170,38 @@ nav {
   background-position: center;
   border: 1px solid var(--line);
 }
+.carousel {
+  position: relative;
+}
+.carousel-track {
+  position: relative;
+}
+.carousel-slide {
+  display: none;
+}
+.carousel-slide.active {
+  display: block;
+}
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 16px;
+}
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 0;
+  padding: 0;
+  background: rgba(120, 110, 98, 0.35);
+  cursor: pointer;
+}
+.carousel-dot.active {
+  background: var(--accent);
+}
+.hero-image,
+.hero-image,
 .product-image,
 .feature-image {
   width: 100%;
@@ -178,6 +210,10 @@ nav {
   border-radius: 18px;
   border: 1px solid var(--line);
   background: #eee;
+}
+.hero-image {
+  min-height: 560px;
+  aspect-ratio: 16 / 8;
 }
 .product-image {
   aspect-ratio: 4 / 3;
@@ -189,6 +225,12 @@ nav {
 .bullet-list {
   margin: 18px 0 0;
   padding-left: 18px;
+}
+.product-section {
+  align-items: center;
+}
+.reverse {
+  grid-template-columns: 0.95fr 1.05fr;
 }
 .pill-grid {
   display: flex;
