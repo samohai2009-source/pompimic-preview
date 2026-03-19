@@ -63,6 +63,17 @@ nav {
 .hero-copy {
   max-width: 760px;
 }
+.hero-logo-block {
+  display: flex;
+  justify-content: center;
+  margin-top: 4px;
+}
+.hero-so-logo {
+  font-size: 18px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--text);
+}
 .split {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
