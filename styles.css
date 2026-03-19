@@ -166,6 +166,25 @@ nav {
   min-height: 560px;
   width: 100%;
   border-radius: 28px;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid var(--line);
+}
+.product-image,
+.feature-image {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  background: #eee;
+}
+.product-image {
+  aspect-ratio: 4 / 3;
+}
+.tall-image {
+  min-height: 360px;
+  aspect-ratio: 4 / 3;
 }
 .bullet-list {
   margin: 18px 0 0;
