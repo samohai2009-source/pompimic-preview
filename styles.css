@@ -195,6 +195,7 @@ nav {
 }
 .carousel-slide {
   display: none;
+  position: relative;
 }
 .carousel-slide.active {
   display: block;
@@ -211,11 +212,34 @@ nav {
   border-radius: 50%;
   border: 0;
   padding: 0;
-  background: rgba(120, 110, 98, 0.35);
+  background: rgba(255, 255, 255, 0.45);
   cursor: pointer;
 }
 .carousel-dot.active {
-  background: var(--accent);
+  background: #fff;
+}
+.product-carousel {
+  overflow: hidden;
+}
+.product-carousel .carousel-dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 22px;
+  margin-top: 0;
+  z-index: 2;
+}
+.product-carousel .carousel-slide::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.26), rgba(0,0,0,0.02));
+  pointer-events: none;
+}
+.product-carousel .feature-image {
+  border-radius: 0;
+  border: 0;
 }
 .hero-image,
 .hero-image,
@@ -247,8 +271,8 @@ nav {
   aspect-ratio: 4 / 3;
 }
 .tall-image {
-  min-height: 360px;
-  aspect-ratio: 4 / 3;
+  min-height: 460px;
+  aspect-ratio: 16 / 10;
 }
 .bullet-list {
   margin: 18px 0 0;
