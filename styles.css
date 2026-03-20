@@ -87,20 +87,20 @@ nav > a:hover::after,
   top: 100%;
   left: 0;
   right: 0;
-  transform: translateY(6px);
+  transform: translateY(0);
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
-  padding: 12px 0 16px;
+  gap: 12px;
+  padding: 0 0 10px;
   background: rgba(255, 255, 255, 0.99);
-  border-top: 1px solid rgba(221, 213, 202, 0.45);
+  border-top: 0;
   border-bottom: 1px solid rgba(221, 213, 202, 0.35);
-  box-shadow: 0 22px 60px rgba(29, 26, 23, 0.05);
+  box-shadow: 0 18px 40px rgba(29, 26, 23, 0.04);
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: opacity .22s ease, transform .22s ease, visibility .22s ease;
+  transition: opacity .18s ease, visibility .18s ease;
   z-index: 20;
 }
 .mega-menu-wide {
@@ -111,18 +111,17 @@ nav > a:hover::after,
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
-  transform: translateY(0);
 }
 .mega-item {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 6px;
   align-items: center;
   padding: 0;
   border-radius: 0;
   background: transparent;
   border: 0;
-  transition: transform .18s ease, opacity .18s ease;
+  transition: transform .15s ease, opacity .15s ease;
 }
 .mega-item:hover {
   transform: translateY(-2px);
@@ -142,7 +141,7 @@ nav > a:hover::after,
 }
 .mega-copy {
   display: grid;
-  gap: 5px;
+  gap: 2px;
   text-transform: none;
   padding-left: 0;
   margin-left: 0;
@@ -160,20 +159,20 @@ nav > a:hover::after,
 .mega-copy span {
   font-size: 10px;
   letter-spacing: 0.02em;
-  line-height: 1.55;
+  line-height: 1.35;
   color: var(--muted);
   text-transform: uppercase;
-  max-width: 24ch;
+  max-width: 22ch;
   margin: 0;
   padding: 0;
 }
 .mega-copy::after {
   content: "Explore";
-  font-size: 10px;
+  font-size: 9px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--text);
-  margin-top: 6px;
+  margin-top: 3px;
   justify-self: center;
 }
 .hero {
@@ -466,8 +465,8 @@ nav > a:hover::after,
   .mega-menu {
     width: 100%;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    padding: 12px 0 14px;
-    gap: 14px;
+    padding: 0 0 10px;
+    gap: 10px;
   }
   .mega-item img {
     width: 100%;
