@@ -139,16 +139,16 @@ nav > a:hover::after,
   background: transparent;
   padding: 0;
   display: block;
-  margin-top: -6px;
+  margin-top: -18px;
 }
 .mega-copy {
   position: relative;
   z-index: 2;
   display: grid;
-  gap: 2px;
+  gap: 0;
   text-transform: none;
   padding: 0;
-  margin: 0 0 -6px;
+  margin: 0 0 -18px;
   justify-items: center;
   text-align: center;
 }
@@ -163,7 +163,7 @@ nav > a:hover::after,
 .mega-copy span {
   font-size: 12px;
   letter-spacing: 0;
-  line-height: 1.22;
+  line-height: 1.1;
   color: var(--muted);
   text-transform: none;
   max-width: 20ch;
