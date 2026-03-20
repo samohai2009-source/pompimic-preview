@@ -113,10 +113,11 @@ nav > a:hover::after,
   pointer-events: auto;
 }
 .mega-item {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  align-items: center;
+  position: relative;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 0;
+  align-items: start;
   padding: 0;
   border-radius: 0;
   background: transparent;
@@ -128,10 +129,9 @@ nav > a:hover::after,
   opacity: .94;
 }
 .mega-item img {
-  order: 2;
   width: 100%;
   min-width: 0;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 16 / 11;
   object-fit: contain;
   object-position: top center;
   border-radius: 0;
@@ -139,14 +139,16 @@ nav > a:hover::after,
   background: transparent;
   padding: 0;
   display: block;
+  margin-top: -6px;
 }
 .mega-copy {
-  order: 1;
+  position: relative;
+  z-index: 2;
   display: grid;
-  gap: 1px;
+  gap: 2px;
   text-transform: none;
   padding: 0;
-  margin: 0 0 2px;
+  margin: 0 0 -6px;
   justify-items: center;
   text-align: center;
 }
@@ -161,7 +163,7 @@ nav > a:hover::after,
 .mega-copy span {
   font-size: 12px;
   letter-spacing: 0;
-  line-height: 1.25;
+  line-height: 1.22;
   color: var(--muted);
   text-transform: none;
   max-width: 20ch;
