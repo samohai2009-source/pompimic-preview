@@ -142,13 +142,18 @@ nav > a:hover::after,
   display: grid;
   gap: 5px;
   text-transform: none;
-  padding-left: 2px;
+  padding-left: 0;
+  margin-left: 0;
+  justify-items: start;
+  text-align: left;
 }
 .mega-copy strong {
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.08em;
   color: var(--text);
+  margin: 0;
+  padding: 0;
 }
 .mega-copy span {
   font-size: 10px;
@@ -157,6 +162,8 @@ nav > a:hover::after,
   color: var(--muted);
   text-transform: uppercase;
   max-width: 24ch;
+  margin: 0;
+  padding: 0;
 }
 .mega-copy::after {
   content: "Explore";
@@ -165,6 +172,7 @@ nav > a:hover::after,
   text-transform: uppercase;
   color: var(--text);
   margin-top: 6px;
+  justify-self: start;
 }
 .hero {
   padding: 64px 0 32px;
