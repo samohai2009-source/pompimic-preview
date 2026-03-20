@@ -36,6 +36,7 @@ a { color: inherit; text-decoration: none; }
   align-items: center;
   justify-content: space-between;
   padding: 16px 0;
+  position: relative;
 }
 .logo {
   font-weight: 700;
@@ -74,7 +75,7 @@ nav > a:hover::after,
   transform: scaleX(1);
 }
 .nav-dropdown {
-  position: relative;
+  position: static;
 }
 .nav-dropdown > a {
   display: inline-flex;
@@ -84,16 +85,17 @@ nav > a:hover::after,
 .mega-menu {
   position: absolute;
   top: calc(100% + 16px);
-  left: 50%;
-  transform: translateX(-50%) translateY(10px);
-  width: min(1120px, 94vw);
+  left: 0;
+  right: 0;
+  transform: translateY(10px);
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 20px;
-  padding: 28px 30px 30px;
+  padding: 28px 0 30px;
   background: rgba(255, 255, 255, 0.99);
-  border: 1px solid rgba(221, 213, 202, 0.45);
-  border-radius: 26px;
+  border-top: 1px solid rgba(221, 213, 202, 0.45);
+  border-bottom: 1px solid rgba(221, 213, 202, 0.35);
   box-shadow: 0 26px 80px rgba(29, 26, 23, 0.07);
   opacity: 0;
   visibility: hidden;
@@ -102,14 +104,14 @@ nav > a:hover::after,
   z-index: 20;
 }
 .mega-menu-wide {
-  width: min(1160px, 95vw);
+  width: 100%;
 }
 .nav-dropdown:hover .mega-menu,
 .nav-dropdown:focus-within .mega-menu {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
-  transform: translateX(-50%) translateY(0);
+  transform: translateY(0);
 }
 .mega-item {
   display: flex;
@@ -131,10 +133,10 @@ nav > a:hover::after,
   min-width: 0;
   aspect-ratio: 4 / 3;
   object-fit: contain;
-  border-radius: 18px;
+  border-radius: 0;
   border: 0;
-  background: #f6f2ec;
-  padding: 8px;
+  background: transparent;
+  padding: 0;
 }
 .mega-copy {
   display: grid;
@@ -452,9 +454,9 @@ nav > a:hover::after,
 
 @media (min-width: 901px) and (max-width: 1180px) {
   .mega-menu {
-    width: min(920px, 93vw);
+    width: 100%;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    padding: 22px;
+    padding: 22px 0;
     gap: 16px;
   }
   .mega-item img {
