@@ -271,8 +271,8 @@ nav {
   aspect-ratio: 4 / 3;
 }
 .tall-image {
-  min-height: 460px;
-  aspect-ratio: 16 / 10;
+  min-height: 320px;
+  aspect-ratio: 16 / 9;
 }
 .bullet-list {
   margin: 18px 0 0;
