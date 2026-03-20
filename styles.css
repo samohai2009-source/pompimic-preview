@@ -83,26 +83,26 @@ nav > a:hover::after,
 }
 .mega-menu {
   position: absolute;
-  top: calc(100% + 20px);
+  top: calc(100% + 18px);
   left: 50%;
-  transform: translateX(-50%) translateY(8px);
-  width: min(980px, 92vw);
+  transform: translateX(-50%) translateY(10px);
+  width: min(1020px, 92vw);
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 14px;
-  padding: 24px;
-  background: rgba(255, 255, 255, 0.98);
-  border: 1px solid rgba(221, 213, 202, 0.7);
-  border-radius: 22px;
-  box-shadow: 0 22px 60px rgba(29, 26, 23, 0.1);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  padding: 26px;
+  background: rgba(255, 255, 255, 0.985);
+  border: 1px solid rgba(221, 213, 202, 0.55);
+  border-radius: 24px;
+  box-shadow: 0 28px 70px rgba(29, 26, 23, 0.08);
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: opacity .2s ease, transform .2s ease, visibility .2s ease;
+  transition: opacity .22s ease, transform .22s ease, visibility .22s ease;
   z-index: 20;
 }
 .mega-menu-wide {
-  width: min(1040px, 94vw);
+  width: min(1080px, 94vw);
 }
 .nav-dropdown:hover .mega-menu,
 .nav-dropdown:focus-within .mega-menu {
@@ -113,51 +113,54 @@ nav > a:hover::after,
 }
 .mega-item {
   display: flex;
-  gap: 18px;
-  align-items: center;
-  padding: 10px;
-  border-radius: 18px;
+  flex-direction: column;
+  gap: 12px;
+  align-items: stretch;
+  padding: 0;
+  border-radius: 0;
   background: transparent;
   border: 0;
-  transition: transform .18s ease, background-color .18s ease;
+  transition: transform .18s ease, opacity .18s ease;
 }
 .mega-item:hover {
   transform: translateY(-2px);
-  background: rgba(244, 240, 232, 0.45);
+  opacity: .92;
 }
 .mega-item img {
-  width: 220px;
-  min-width: 220px;
+  width: 100%;
+  min-width: 0;
   aspect-ratio: 16 / 10;
   object-fit: cover;
-  border-radius: 14px;
+  border-radius: 16px;
   border: 0;
   background: #eee;
 }
 .mega-copy {
   display: grid;
-  gap: 8px;
+  gap: 6px;
   text-transform: none;
 }
 .mega-copy strong {
-  font-size: 15px;
-  letter-spacing: 0.05em;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
   color: var(--text);
 }
 .mega-copy span {
-  font-size: 12px;
+  font-size: 11px;
   letter-spacing: 0.01em;
-  line-height: 1.65;
+  line-height: 1.6;
   color: var(--muted);
   text-transform: none;
-  max-width: 34ch;
+  max-width: 28ch;
 }
 .mega-copy::after {
-  content: "View product →";
-  font-size: 11px;
-  letter-spacing: 0.08em;
+  content: "Explore →";
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
   color: var(--text);
-  margin-top: 6px;
+  margin-top: 4px;
 }
 .hero {
   padding: 64px 0 32px;
@@ -447,11 +450,14 @@ nav > a:hover::after,
 
 @media (min-width: 901px) and (max-width: 1180px) {
   .mega-menu {
-    width: min(820px, 92vw);
+    width: min(860px, 92vw);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    padding: 20px;
+    gap: 14px;
   }
   .mega-item img {
-    width: 170px;
-    min-width: 170px;
+    width: 100%;
+    min-width: 0;
   }
   .mega-copy strong {
     font-size: 13px;
