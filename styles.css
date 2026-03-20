@@ -87,20 +87,19 @@ nav > a:hover::after,
   top: 100%;
   left: 0;
   right: 0;
-  transform: translateY(0);
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 12px;
-  padding: 0 0 10px;
-  background: rgba(255, 255, 255, 0.99);
-  border-top: 0;
-  border-bottom: 1px solid rgba(221, 213, 202, 0.35);
-  box-shadow: 0 18px 40px rgba(29, 26, 23, 0.04);
+  gap: 18px;
+  padding: 14px 0 12px;
+  background: #fff;
+  border-top: 1px solid rgba(221, 213, 202, 0.4);
+  border-bottom: 1px solid rgba(221, 213, 202, 0.28);
+  box-shadow: 0 16px 30px rgba(29, 26, 23, 0.04);
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: opacity .18s ease, visibility .18s ease;
+  transition: opacity .16s ease, visibility .16s ease;
   z-index: 20;
 }
 .mega-menu-wide {
@@ -113,65 +112,60 @@ nav > a:hover::after,
   pointer-events: auto;
 }
 .mega-item {
-  position: relative;
-  display: grid;
-  grid-template-rows: auto 1fr;
-  gap: 0;
-  align-items: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
   padding: 0;
-  border-radius: 0;
   background: transparent;
   border: 0;
-  transition: transform .15s ease, opacity .15s ease;
+  transition: opacity .15s ease;
 }
 .mega-item:hover {
-  transform: translateY(-1px);
-  opacity: .94;
-}
-.mega-item img {
-  width: 100%;
-  min-width: 0;
-  aspect-ratio: 16 / 11;
-  object-fit: contain;
-  object-position: top center;
-  border-radius: 0;
-  border: 0;
-  background: transparent;
-  padding: 0;
-  display: block;
-  margin-top: -18px;
+  opacity: .9;
 }
 .mega-copy {
-  position: relative;
-  z-index: 2;
-  display: grid;
-  gap: 0;
-  text-transform: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1px;
+  margin: 0;
   padding: 0;
-  margin: 0 0 -18px;
-  justify-items: center;
   text-align: center;
 }
 .mega-copy strong {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 700;
   letter-spacing: 0;
   color: var(--text);
   margin: 0;
   padding: 0;
+  line-height: 1.1;
 }
 .mega-copy span {
-  font-size: 12px;
+  font-size: 11px;
   letter-spacing: 0;
-  line-height: 1.1;
+  line-height: 1.15;
   color: var(--muted);
   text-transform: none;
-  max-width: 20ch;
+  max-width: 18ch;
   margin: 0;
   padding: 0;
 }
 .mega-copy::after {
   content: none;
+}
+.mega-item img {
+  width: 100%;
+  min-width: 0;
+  aspect-ratio: 16 / 10;
+  object-fit: contain;
+  object-position: center top;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  display: block;
 }
 .hero {
   padding: 64px 0 32px;
@@ -463,15 +457,15 @@ nav > a:hover::after,
   .mega-menu {
     width: 100%;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    padding: 0 0 10px;
-    gap: 10px;
+    padding: 12px 0 10px;
+    gap: 12px;
   }
   .mega-item img {
     width: 100%;
     min-width: 0;
   }
   .mega-copy strong {
-    font-size: 12px;
+    font-size: 13px;
   }
   .mega-copy span {
     font-size: 10px;
