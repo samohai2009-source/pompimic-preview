@@ -112,10 +112,11 @@ nav > a:hover::after,
   pointer-events: auto;
 }
 .mega-item {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4px;
+  gap: 0;
   padding: 0;
   background: transparent;
   border: 0;
@@ -125,16 +126,16 @@ nav > a:hover::after,
   opacity: .9;
 }
 .mega-copy {
+  position: relative;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 1px;
-  margin: 0 0 -6px;
+  margin: 0 0 -18px;
   padding: 0;
   text-align: center;
-  position: relative;
-  z-index: 2;
 }
 .mega-copy strong {
   font-size: 15px;
@@ -143,12 +144,12 @@ nav > a:hover::after,
   color: var(--text);
   margin: 0;
   padding: 0;
-  line-height: 1.1;
+  line-height: 1.08;
 }
 .mega-copy span {
   font-size: 11px;
   letter-spacing: 0;
-  line-height: 1.15;
+  line-height: 1.12;
   color: var(--muted);
   text-transform: none;
   max-width: 18ch;
@@ -168,7 +169,7 @@ nav > a:hover::after,
   background: transparent;
   padding: 0;
   display: block;
-  margin-top: 10px;
+  margin-top: 0;
 }
 .hero {
   padding: 64px 0 32px;
