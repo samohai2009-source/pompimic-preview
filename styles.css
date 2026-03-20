@@ -271,7 +271,7 @@ nav {
   aspect-ratio: 4 / 3;
 }
 .tall-image {
-  min-height: 320px;
+  min-height: 0;
   aspect-ratio: 16 / 9;
 }
 .bullet-list {
@@ -280,6 +280,15 @@ nav {
 }
 .product-section {
   align-items: center;
+}
+.product-copy {
+  max-width: 430px;
+  justify-self: start;
+}
+.product-copy p,
+.product-copy li,
+.product-copy h2 {
+  max-width: 22ch;
 }
 .reverse {
   grid-template-columns: 0.95fr 1.05fr;
