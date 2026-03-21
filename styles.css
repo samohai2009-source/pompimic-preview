@@ -223,15 +223,18 @@ nav > a:hover::after,
 .hero-copy {
   max-width: 760px;
   color: #fff;
+  background: transparent;
 }
 .hero-copy .eyebrow,
-.hero-copy p {
-  color: rgba(255,255,255,0.86);
+.hero-copy p,
+.hero-copy h1 {
+  color: rgba(255,255,255,0.92);
+  background: transparent;
 }
 .hero-copy .btn-secondary {
   color: #fff;
   border-color: rgba(255,255,255,0.5);
-  background: rgba(255,255,255,0.08);
+  background: transparent;
 }
 .hero-logo-block {
   display: flex;
