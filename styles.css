@@ -581,12 +581,14 @@ nav > a:hover::after,
 }
 .product-link-list a {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   justify-content: space-between;
-  padding: 8px 0;
+  padding: 4px 0;
   border: 0;
+  outline: 0;
   border-radius: 0;
   background: transparent;
+  box-shadow: none;
   transition: transform .16s ease, opacity .16s ease;
 }
 .product-link-list a:hover {
@@ -597,10 +599,16 @@ nav > a:hover::after,
 .product-link-list strong {
   font-size: 16px;
   letter-spacing: .02em;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
 }
 .product-link-list span {
   color: var(--muted);
   font-size: 13px;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
 }
 .card-image {
   width: 100%;
