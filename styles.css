@@ -1,9 +1,9 @@
 :root {
-  --bg: #f4f0e8;
-  --panel: #fbf8f3;
+  --bg: #ffffff;
+  --panel: #ffffff;
   --text: #1d1a17;
   --muted: #6e685f;
-  --line: #ddd5ca;
+  --line: #e9e3da;
   --accent: #1d1a17;
   --accent-2: #c9b8a0;
 }
@@ -14,7 +14,7 @@ body {
   margin: 0;
   font-family: Madefor, "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: var(--text);
-  background: var(--bg);
+  background: #fff;
   line-height: 1.6;
 }
 
@@ -28,8 +28,8 @@ a { color: inherit; text-decoration: none; }
   top: 0;
   z-index: 10;
   backdrop-filter: blur(10px);
-  background: rgba(245, 243, 238, 0.85);
-  border-bottom: 1px solid rgba(217, 211, 203, 0.8);
+  background: rgba(255, 255, 255, 0.88);
+  border-bottom: 1px solid rgba(231, 226, 218, 0.7);
 }
 .nav {
   display: flex;
@@ -303,7 +303,7 @@ nav > a:hover::after,
   padding: 56px 0;
 }
 .section.alt {
-  background: #eee7dd;
+  background: #fff;
 }
 .section-head {
   margin-bottom: 24px;
@@ -450,13 +450,25 @@ nav > a:hover::after,
   border-radius: 0;
   border: 0;
   filter: saturate(0.94) contrast(0.96);
+  transform: scale(1.14);
+  animation: heroPushIn 8s ease-out forwards;
+  will-change: transform;
 }
 .hero-overlay {
   position: absolute;
   inset: 0;
   border-radius: 0;
-  background: linear-gradient(to right, rgba(17,15,13,0.56), rgba(17,15,13,0.18) 42%, rgba(17,15,13,0.08) 100%), linear-gradient(to top, rgba(17,15,13,0.38), rgba(17,15,13,0.08) 38%, rgba(17,15,13,0.02) 100%);
+  background: linear-gradient(to right, rgba(17,15,13,0.5), rgba(17,15,13,0.16) 42%, rgba(17,15,13,0.06) 100%), linear-gradient(to top, rgba(17,15,13,0.34), rgba(17,15,13,0.08) 38%, rgba(17,15,13,0.02) 100%);
   pointer-events: none;
+}
+
+@keyframes heroPushIn {
+  from {
+    transform: scale(1.14);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 .product-image {
   aspect-ratio: 4 / 3;
