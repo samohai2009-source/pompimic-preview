@@ -23,12 +23,27 @@ a { color: inherit; text-decoration: none; }
   width: min(1180px, calc(100% - 32px));
   margin: 0 auto;
 }
+.top-strip {
+  background: #fff;
+  border-bottom: 1px solid rgba(231, 226, 218, 0.7);
+}
+.top-strip-inner {
+  min-height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #7a746c;
+}
 .site-header {
   position: sticky;
   top: 0;
   z-index: 10;
   backdrop-filter: blur(10px);
-  background: rgba(255, 255, 255, 0.88);
+  background: #fff;
   border-bottom: 1px solid rgba(231, 226, 218, 0.7);
 }
 .nav {
@@ -461,7 +476,7 @@ nav > a:hover::after,
   position: absolute;
   inset: 0;
   border-radius: 0;
-  background: linear-gradient(to right, rgba(17,15,13,0.5), rgba(17,15,13,0.16) 42%, rgba(17,15,13,0.06) 100%), linear-gradient(to top, rgba(17,15,13,0.34), rgba(17,15,13,0.08) 38%, rgba(17,15,13,0.02) 100%);
+  background: none;
   pointer-events: none;
 }
 
@@ -537,6 +552,16 @@ nav > a:hover::after,
   .cta-box {
     grid-template-columns: 1fr;
     display: grid;
+  }
+  .top-strip-inner {
+    min-height: 30px;
+    justify-content: center;
+    text-align: center;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+  }
+  .top-strip-inner span:last-child {
+    display: none;
   }
   .hero-full-inner {
     min-height: 72vh;
