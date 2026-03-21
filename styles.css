@@ -24,55 +24,59 @@ a { color: inherit; text-decoration: none; }
   margin: 0 auto;
 }
 .top-strip {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
+  position: relative;
   z-index: 20;
-  background: transparent;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+  background: #f4f2ed;
+  border-bottom: 1px solid rgba(220, 214, 205, 0.9);
 }
 .top-strip-inner {
-  min-height: 36px;
+  min-height: 34px;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  gap: 28px;
+  justify-content: space-between;
+  gap: 24px;
   font-size: 10px;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.86);
+  color: #2f3e4a;
+}
+.top-strip-left,
+.top-strip-right {
+  display: flex;
+  align-items: center;
+  gap: 26px;
 }
 .site-header {
-  position: absolute;
-  top: 36px;
+  position: relative;
+  top: 0;
   left: 0;
   right: 0;
   z-index: 19;
   backdrop-filter: none;
-  background: transparent;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  background: #fff;
+  border-bottom: 1px solid rgba(220, 214, 205, 0.7);
 }
 .nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 0 18px;
+  padding: 22px 0 20px;
   position: relative;
 }
 .logo {
-  font-weight: 700;
-  letter-spacing: 0.22em;
-  font-size: 13px;
-  color: #fff;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  font-size: 20px;
+  color: #133d78;
 }
 nav {
   display: flex;
   gap: 34px;
-  font-size: 11px;
-  letter-spacing: 0.18em;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.9);
+  color: #2f3e4a;
   align-items: center;
 }
 nav > a,
@@ -86,8 +90,8 @@ nav > a::after,
   left: 0;
   right: 0;
   bottom: -8px;
-  height: 1px;
-  background: rgba(255,255,255,0.95);
+  height: 2px;
+  background: #2f3e4a;
   transform: scaleX(0);
   transform-origin: center;
   transition: transform .18s ease;
@@ -230,12 +234,12 @@ nav > a:hover::after,
 .hero-full-inner {
   position: relative;
   z-index: 2;
-  min-height: min(88vh, 980px);
+  min-height: min(78vh, 860px);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   gap: 18px;
-  padding: 170px 0 92px;
+  padding: 80px 0 30px;
 }
 .hero-content-wrap {
   position: absolute;
@@ -244,7 +248,7 @@ nav > a:hover::after,
   align-items: flex-end;
 }
 .hero-copy {
-  max-width: 640px;
+  max-width: 620px;
   color: #fff;
   background: none !important;
   box-shadow: none !important;
@@ -255,30 +259,38 @@ nav > a:hover::after,
 .hero-copy .btn,
 .hero-copy .btn-secondary,
 .hero-copy .btn-primary {
-  color: rgba(255,255,255,0.96);
   background: none !important;
   box-shadow: none !important;
 }
-.hero-copy .eyebrow {
-  font-size: 11px;
-  letter-spacing: 0.22em;
-  margin-bottom: 14px;
-}
 .hero-copy h1 {
-  font-size: clamp(54px, 7.6vw, 104px);
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 0.96;
-  margin: 0 0 16px;
-  max-width: 10ch;
+  font-size: clamp(40px, 4.8vw, 58px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.02;
+  margin: 0 0 10px;
+  max-width: none;
+  color: #fff;
 }
 .hero-copy p {
   max-width: 42ch;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.45;
+  margin: 0 0 16px;
+  color: #fff;
 }
-.hero-copy .btn-primary,
+.hero-copy-box {
+  width: min(620px, 100%);
+  background: rgba(10, 52, 109, 0.82) !important;
+  padding: 26px 34px 30px;
+}
+.hero-copy .btn-primary {
+  color: #123d77;
+  background: #fff !important;
+  border-color: #fff;
+  min-width: 142px;
+}
 .hero-copy .btn-secondary {
+  color: #fff;
   border-color: rgba(255,255,255,0.55);
 }
 .hero-logo-block {
@@ -582,26 +594,27 @@ nav > a:hover::after,
     display: grid;
   }
   .top-strip {
-    position: absolute;
+    position: relative;
   }
   .top-strip-inner {
     min-height: 30px;
     justify-content: center;
     text-align: center;
     font-size: 9px;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.08em;
     gap: 14px;
   }
-  .top-strip-inner span:nth-child(2),
-  .top-strip-inner span:nth-child(3) {
+  .top-strip-left span:last-child,
+  .top-strip-right span:nth-child(1),
+  .top-strip-right span:nth-child(2) {
     display: none;
   }
   .site-header {
-    top: 30px;
+    top: 0;
   }
   .hero-full-inner {
     min-height: 72vh;
-    padding: 132px 0 72px;
+    padding: 40px 0 24px;
   }
   .hero-image {
     min-height: 72vh;
