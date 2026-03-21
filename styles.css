@@ -92,10 +92,10 @@ nav > a:hover::after,
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 22px;
   padding: 22px;
-  background: rgba(255, 255, 255, 0.96);
-  border: 1px solid rgba(221, 213, 202, 0.82);
+  background: #fff;
+  border: 0;
   border-radius: 28px;
-  box-shadow: 0 24px 48px rgba(29, 26, 23, 0.1);
+  box-shadow: 0 22px 50px rgba(29, 26, 23, 0.08);
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -128,8 +128,8 @@ nav > a:hover::after,
   overflow: hidden;
 }
 .mega-item:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 18px 30px rgba(29, 26, 23, 0.08);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(29, 26, 23, 0.04);
 }
 .mega-copy {
   position: relative;
