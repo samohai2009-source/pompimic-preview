@@ -244,10 +244,11 @@ nav > a:hover::after,
   width: 100%;
   max-width: none;
   min-height: min(78vh, 860px);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  gap: 18px;
+  display: grid;
+  grid-template-columns: minmax(360px, 620px) minmax(260px, 430px);
+  align-items: end;
+  justify-content: space-between;
+  gap: 24px;
   padding: 80px 0 0;
 }
 .hero-content-wrap {
@@ -276,23 +277,24 @@ nav > a:hover::after,
   font-weight: 700;
   letter-spacing: -0.03em;
   line-height: 1.02;
-  margin: 0 0 10px;
+  margin: 0 0 6px;
   max-width: none;
   color: #fff;
 }
 .hero-copy p {
   max-width: 42ch;
-  font-size: 18px;
-  line-height: 1.45;
-  margin: 0 0 16px;
+  font-size: 16px;
+  line-height: 1.4;
+  margin: 0 0 10px;
   color: #fff;
 }
 .hero-copy-box {
   width: min(620px, calc(100vw - 40px));
   margin-left: 0;
   margin-bottom: 0;
-  background: rgba(10, 52, 109, 0.88) !important;
-  padding: 26px 34px 30px;
+  align-self: end;
+  background: rgba(10, 52, 109, 0.9) !important;
+  padding: 18px 30px 20px;
 }
 .hero-copy .btn-primary {
   color: #123d77;
@@ -310,12 +312,23 @@ nav > a:hover::after,
 .hero-so-logo {
   display: inline-flex;
   align-items: center;
-  margin: 0 0 18px;
-  font-size: 15px;
+  margin: 0 0 10px;
+  font-size: 24px;
   font-weight: 600;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.92);
+  letter-spacing: 0.08em;
+  line-height: 1.1;
+  color: rgba(255,255,255,0.96);
+}
+.hero-side-copy {
+  align-self: end;
+  padding-bottom: 20px;
+}
+.hero-side-text {
+  max-width: 22ch;
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.84);
 }
 .split {
   display: grid;
@@ -353,7 +366,7 @@ nav > a:hover::after,
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
-  margin-top: 24px;
+  margin-top: 14px;
 }
 .btn {
   display: inline-flex;
@@ -639,6 +652,8 @@ nav > a:hover::after,
   }
   .hero-full-inner {
     min-height: 72vh;
+    grid-template-columns: 1fr;
+    gap: 10px;
     padding: 40px 0 0;
   }
   .hero-image {
@@ -648,10 +663,22 @@ nav > a:hover::after,
   .hero-copy {
     max-width: 100%;
   }
+  .hero-copy-box {
+    width: 100%;
+    padding: 16px 20px 18px;
+  }
+  .hero-side-copy {
+    justify-self: start;
+    padding: 0 20px 18px;
+  }
   .hero-so-logo {
-    font-size: 14px;
-    letter-spacing: 0.18em;
-    text-align: center;
+    font-size: 18px;
+    letter-spacing: 0.06em;
+    text-align: left;
+  }
+  .hero-side-text {
+    font-size: 13px;
+    max-width: 28ch;
   }
   .wire-box.tall { min-height: 240px; }
   .cta-box { padding: 24px; }
