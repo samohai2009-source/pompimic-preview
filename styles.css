@@ -312,26 +312,37 @@ nav > a:hover::after,
 .hero-so-logo {
   display: inline-flex;
   align-items: center;
-  margin: 0 0 10px;
-  font-size: 24px;
+  margin: 0 0 14px;
+  font-size: clamp(26px, 2.4vw, 34px);
   font-weight: 600;
-  letter-spacing: 0.08em;
-  line-height: 1.1;
-  color: rgba(255,255,255,0.96);
+  letter-spacing: 0.04em;
+  line-height: 1.02;
+  color: rgba(255,255,255,0.98);
+  text-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
 }
 .hero-side-copy {
   justify-self: end;
   align-self: end;
-  width: min(360px, 100%);
-  padding: 0 8px 20px 0;
+  width: min(400px, 100%);
+  padding: 0 10px 24px 0;
   text-align: left;
 }
+.hero-side-copy::before {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 1px;
+  margin: 0 0 18px;
+  background: rgba(255,255,255,0.55);
+}
 .hero-side-text {
-  max-width: 24ch;
+  max-width: 26ch;
   margin: 0;
-  font-size: 15px;
-  line-height: 1.7;
-  color: rgba(255,255,255,0.84);
+  font-size: 14px;
+  line-height: 1.95;
+  letter-spacing: 0.03em;
+  color: rgba(255,255,255,0.82);
+  text-shadow: 0 8px 20px rgba(0, 0, 0, 0.14);
 }
 .split {
   display: grid;
@@ -675,14 +686,19 @@ nav > a:hover::after,
     width: 100%;
     padding: 0 20px 18px;
   }
+  .hero-side-copy::before {
+    width: 44px;
+    margin-bottom: 14px;
+  }
   .hero-so-logo {
-    font-size: 18px;
-    letter-spacing: 0.06em;
+    font-size: 20px;
+    letter-spacing: 0.04em;
     text-align: left;
   }
   .hero-side-text {
     font-size: 13px;
     max-width: 28ch;
+    line-height: 1.8;
   }
   .wire-box.tall { min-height: 240px; }
   .cta-box { padding: 24px; }
