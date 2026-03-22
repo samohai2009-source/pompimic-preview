@@ -308,8 +308,12 @@ nav > a:hover::after,
   display: none;
 }
 .hero-so-logo {
-  font-size: 18px;
-  letter-spacing: 0.32em;
+  display: inline-flex;
+  align-items: center;
+  margin: 0 0 18px;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
   color: rgba(255,255,255,0.92);
 }
