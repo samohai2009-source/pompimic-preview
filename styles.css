@@ -111,14 +111,14 @@ nav > a:hover::after,
 }
 .mega-menu {
   position: absolute;
-  top: calc(100% + 6px);
+  top: 100%;
   left: 0;
   right: 0;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 12px;
-  padding: 34px 24px 26px;
+  gap: 0;
+  padding: 24px 0 18px;
   background: #fff;
   border: 0;
   border-radius: 0;
@@ -148,15 +148,15 @@ nav > a:hover::after,
   justify-content: flex-start;
   gap: 0;
   min-height: 300px;
-  padding: 0 8px;
+  padding: 0 16px;
   background: #fff;
   border: 0;
   border-radius: 0;
   transition: opacity .16s ease;
-  overflow: visible;
+  overflow: hidden;
 }
 .mega-item:hover {
-  opacity: .86;
+  opacity: .96;
   box-shadow: none;
 }
 .mega-copy {
@@ -207,17 +207,22 @@ nav > a:hover::after,
   content: none;
 }
 .mega-item img {
-  width: min(86%, 300px);
+  width: min(100%, 360px);
   min-width: 0;
   aspect-ratio: 16 / 10;
-  object-fit: contain;
-  object-position: center bottom;
+  object-fit: cover;
+  object-position: center;
   border: 0;
-  background: #fff;
+  background: transparent;
   padding: 0;
   display: block;
-  margin: 30px auto 0;
-  transform: none;
+  margin: 12px auto 0;
+  transform: scale(1.08);
+  transform-origin: center;
+  transition: transform .22s ease;
+}
+.mega-item:hover img {
+  transform: scale(1.12);
 }
 .mega-item::after {
   content: none;
@@ -424,6 +429,7 @@ nav > a:hover::after,
 .carousel-slide {
   display: none;
   position: relative;
+  overflow: hidden;
 }
 .carousel-slide.active {
   display: block;
@@ -455,7 +461,9 @@ nav > a:hover::after,
   background: #fff;
 }
 .product-carousel {
+  position: relative;
   overflow: hidden;
+  background: #f4f2ed;
 }
 .product-carousel .carousel-dots {
   position: absolute;
@@ -476,6 +484,13 @@ nav > a:hover::after,
 .product-carousel .feature-image {
   border-radius: 0;
   border: 0;
+  transform: scale(1.08);
+  transform-origin: center;
+  transition: transform 4.2s ease;
+  will-change: transform;
+}
+.product-carousel .carousel-slide.active .feature-image {
+  transform: scale(1.14);
 }
 .hero-image,
 .hero-image,
