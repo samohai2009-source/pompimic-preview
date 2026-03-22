@@ -325,7 +325,7 @@ nav > a:hover::after,
 .hero-side-copy {
   justify-self: end;
   align-self: center;
-  width: max-content;
+  width: fit-content;
   max-width: calc(100% - 220px);
   padding: 0 220px 0 0;
   display: flex;
@@ -337,9 +337,10 @@ nav > a:hover::after,
 .hero-side-copy::before {
   content: "";
   display: block;
+  align-self: flex-end;
   width: 64px;
   height: 1px;
-  margin: 0 0 18px auto;
+  margin: 0 0 18px;
   background: rgba(255,255,255,0.78);
 }
 .hero-side-text {
