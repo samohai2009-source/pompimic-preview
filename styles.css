@@ -324,8 +324,8 @@ nav > a:hover::after,
 }
 .hero-side-copy {
   position: absolute;
-  right: 220px;
-  top: 50%;
+  right: 210px;
+  top: calc(50% + 20px);
   transform: translateY(-50%);
   width: max-content;
   max-width: none;
