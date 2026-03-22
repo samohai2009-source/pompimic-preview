@@ -241,12 +241,14 @@ nav > a:hover::after,
 .hero-full-inner {
   position: relative;
   z-index: 2;
+  width: 100%;
+  max-width: none;
   min-height: min(78vh, 860px);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   gap: 18px;
-  padding: 80px 0 30px;
+  padding: 80px 0 0;
 }
 .hero-content-wrap {
   position: absolute;
@@ -286,8 +288,10 @@ nav > a:hover::after,
   color: #fff;
 }
 .hero-copy-box {
-  width: min(620px, 100%);
-  background: rgba(10, 52, 109, 0.82) !important;
+  width: min(620px, calc(100vw - 40px));
+  margin-left: 0;
+  margin-bottom: 0;
+  background: rgba(10, 52, 109, 0.88) !important;
   padding: 26px 34px 30px;
 }
 .hero-copy .btn-primary {
@@ -631,7 +635,7 @@ nav > a:hover::after,
   }
   .hero-full-inner {
     min-height: 72vh;
-    padding: 40px 0 24px;
+    padding: 40px 0 0;
   }
   .hero-image {
     min-height: 72vh;
