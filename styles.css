@@ -294,7 +294,7 @@ nav > a:hover::after,
   margin-bottom: 0;
   align-self: end;
   background: rgba(10, 52, 109, 0.9) !important;
-  padding: 18px 30px 20px;
+  padding: 18px 30px 20px 40px;
 }
 .hero-copy .btn-primary {
   color: #123d77;
