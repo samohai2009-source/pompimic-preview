@@ -322,27 +322,27 @@ nav > a:hover::after,
 }
 .hero-side-copy {
   justify-self: end;
-  align-self: end;
+  align-self: center;
   width: min(520px, 100%);
-  padding: 0 10px 26px 0;
-  text-align: left;
+  padding: 0 18px 0 0;
+  text-align: center;
 }
 .hero-side-copy::before {
   content: "";
   display: block;
   width: 72px;
   height: 1px;
-  margin: 0 0 22px;
+  margin: 0 auto 22px;
   background: rgba(255,255,255,0.72);
 }
 .hero-side-text {
-  max-width: none;
-  margin: 0;
-  font-size: 20px;
-  line-height: 1.45;
-  letter-spacing: 0.035em;
-  color: rgba(255,255,255,0.97);
-  text-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+  max-width: 18ch;
+  margin: 0 auto;
+  font-size: 21px;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+  color: rgba(233, 237, 242, 0.78);
+  text-shadow: 0 10px 24px rgba(0, 0, 0, 0.14);
 }
 .split {
   display: grid;
@@ -685,10 +685,11 @@ nav > a:hover::after,
     justify-self: start;
     width: 100%;
     padding: 0 20px 18px;
+    text-align: left;
   }
   .hero-side-copy::before {
     width: 44px;
-    margin-bottom: 14px;
+    margin: 0 0 14px;
   }
   .hero-so-logo {
     font-size: 24px;
@@ -697,9 +698,10 @@ nav > a:hover::after,
   }
   .hero-side-text {
     font-size: 16px;
-    max-width: none;
+    max-width: 22ch;
+    margin: 0;
     line-height: 1.65;
-    color: rgba(255,255,255,0.96);
+    color: rgba(233, 237, 242, 0.82);
   }
   .wire-box.tall { min-height: 240px; }
   .cta-box { padding: 24px; }
