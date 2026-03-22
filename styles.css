@@ -320,11 +320,14 @@ nav > a:hover::after,
   color: rgba(255,255,255,0.96);
 }
 .hero-side-copy {
+  justify-self: end;
   align-self: end;
-  padding-bottom: 20px;
+  width: min(360px, 100%);
+  padding: 0 8px 20px 0;
+  text-align: left;
 }
 .hero-side-text {
-  max-width: 22ch;
+  max-width: 24ch;
   margin: 0;
   font-size: 15px;
   line-height: 1.7;
@@ -669,6 +672,7 @@ nav > a:hover::after,
   }
   .hero-side-copy {
     justify-self: start;
+    width: 100%;
     padding: 0 20px 18px;
   }
   .hero-so-logo {
