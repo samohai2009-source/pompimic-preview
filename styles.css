@@ -311,8 +311,8 @@ nav > a:hover::after,
 }
 .hero-so-logo {
   display: block;
-  width: max-content;
-  margin: 0 0 14px auto;
+  width: 100%;
+  margin: 0 0 14px;
   font-size: clamp(34px, 3vw, 44px);
   font-weight: 600;
   letter-spacing: 0.015em;
@@ -325,7 +325,7 @@ nav > a:hover::after,
 .hero-side-copy {
   justify-self: end;
   align-self: center;
-  width: fit-content;
+  width: 520px;
   max-width: calc(100% - 220px);
   padding: 0 220px 0 0;
   display: flex;
@@ -337,16 +337,16 @@ nav > a:hover::after,
 .hero-side-copy::before {
   content: "";
   display: block;
-  align-self: flex-end;
   width: 64px;
   height: 1px;
-  margin: 0 0 18px;
+  margin: 0 0 18px auto;
   background: rgba(255,255,255,0.78);
 }
 .hero-side-text {
-  width: max-content;
+  display: block;
+  width: 100%;
   max-width: none;
-  margin: 0 0 0 auto;
+  margin: 0;
   font-size: 18px;
   line-height: 1.35;
   letter-spacing: 0.01em;
