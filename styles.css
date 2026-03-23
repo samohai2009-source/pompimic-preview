@@ -354,7 +354,7 @@ nav > a:hover::after,
   font-size: 18px;
   line-height: 1.35;
   letter-spacing: 0.01em;
-  color: #fff;
+  color: #ffffff !important;
   font-weight: 300;
   text-align: right;
   white-space: nowrap;
